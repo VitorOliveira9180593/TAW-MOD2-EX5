@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TAW-MOD2-EX5</title>
+</head>
+<body>
+    <header>
+        <h1>Registration form</h1>
+    </header>
+
+    <form action="form.html" method="POST" id="form1">
+        <fieldset>
+            <legend>Personal Info</legend>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" pattern="[A-Z][a-z]+\s[A-Z][a-z]+" required>
+            </div>
+
+            <div>
+                <label for="member">Member</label>
+                <input type="radio" name="membership" id="member" value="member" checked>
+                <label for="non-member">Non-Member</label>
+                <input type="radio" name="membership" id="non-member" value="non-member">
+            </div>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Reservation Info</legend>
+            <div>
+                <label for="facility">Facility</label>
+                <select name="facility" id="facility">
+                    <option value="badmington">Badmington</option>
+                    <option value="squash">Squash</option>
+                    <option value="racquetball">Racquetball</option>
+                </select>
+            </div>
+            <div>
+                <label for="DateTime">Date and Time of reservation:</label>
+                <input type="datetime-local" name="DateTime" id="DateTime" required>
+            </div>
+            <div>
+                <input type="checkbox" name="TS" id="TS" required>
+                <label for="TS">I accept the Terms of Service</label>
+            </div>
+        </fieldset>
+    </form>
+
+    <div>
+        <button type="submit" form="form1" value="Submit">Submit</button>
+    </div>
+</body>
+</html>
